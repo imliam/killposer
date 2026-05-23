@@ -69,4 +69,3 @@ killposer ~/projects --force
 killposer walks the given directory up to `--depth` levels deep, looking for folders that contain both a `composer.json` and a `vendor/` directory. Results are sorted by vendor size (largest first) so the biggest wins are at the top.
 
 Once you confirm, it deletes only the `vendor/` directory - your source code is untouched. Run `composer install` in any project to restore it.
-
