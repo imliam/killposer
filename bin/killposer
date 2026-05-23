@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+$autoload = __DIR__ . '/../vendor/autoload.php';
+
+if (! file_exists($autoload)) {
+    fwrite(STDERR, "Error: Dependencies not installed. Run 'composer install' first.\n");
+    exit(1);
+}
+
+require $autoload;
+
+use Killposer\Commands\ScanCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('killposer', '1.0.0');
+$app->add(new ScanCommand());
+$app->setDefaultCommand('scan', true);
+$app->run();
