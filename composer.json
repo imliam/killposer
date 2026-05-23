@@ -25,7 +25,7 @@
         }
     },
     "bin": [
-        "bin/killposer"
+        "killposer"
     ],
     "config": {
         "allow-plugins": {
